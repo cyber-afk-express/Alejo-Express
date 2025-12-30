@@ -70,9 +70,11 @@ h2 {
   color: #111;
 }
 
-/* Hero */
+/* Hero con fondo elegante académico */
 .hero {
-  background: linear-gradient(135deg, #f9f9ff 0%, #f0fff4 100%);
+  background: 
+    linear-gradient(rgba(250, 250, 250, 0.85), rgba(240, 255, 244, 0.85)),
+    url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
   padding: 6rem 1.5rem;
   text-align: center;
   border-radius: 0 0 24px 24px;
@@ -203,84 +205,6 @@ h2 {
   justify-content: center;
   font-weight: bold;
   font-size: 0.85rem;
-}
-
-/* Reviews */
-.review-form {
-  max-width: 600px;
-  margin: 0 auto 3rem;
-  background: var(--card-bg);
-  padding: 2rem;
-  border-radius: 20px;
-  box-shadow: 0 6px 20px var(--shadow);
-}
-
-.review-form input,
-.review-form textarea {
-  width: 100%;
-  padding: 14px;
-  margin: 0.8rem 0;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  font-family: inherit;
-  font-size: 1rem;
-}
-
-.rating {
-  margin: 1rem 0;
-  font-size: 28px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.rating span:first-child {
-  font-size: 1rem;
-  margin-right: 8px;
-  color: #555;
-}
-
-.star {
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.star:hover,
-.star.selected {
-  color: #ffd700;
-  transform: scale(1.2);
-}
-
-#reviews-list {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.review-item {
-  background: var(--card-bg);
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px var(--shadow);
-  border-left: 4px solid var(--accent);
-}
-
-.review-item h4 {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 0.5rem;
-  color: #111;
-}
-
-.review-stars {
-  color: #ffd700;
-}
-
-.review-date {
-  font-size: 0.85rem;
-  color: #888;
-  margin-top: 0.5rem;
 }
 
 /* Contact */
