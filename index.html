@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alejo Express — Soluciones Académicas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="#home">Inicio</a>
+      <a href="#services">Servicios</a>
+      <a href="#portfolio">Portafolio</a>
+      <a href="#how">Cómo funciona</a>
+      <a href="#reviews">Reseñas</a>
+      <a href="#contact">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>Alejo Express</h1>
+        <p class="subtitle">Soluciones académicas rápidas y profesionales</p>
+        <p class="price">Diapositivas desde <strong>30.000 COP</strong></p>
+        <p class="delivery">✅ Entrega en menos de 1 hora</p>
+        <a href="https://wa.me/573044883335" class="cta-button">Escríbeme por WhatsApp</a>
+      </div>
+    </section>
+
+    <section id="services">
+      <h2>Nuestros Servicios</h2>
+      <div class="services-grid">
+        <div class="card">
+          <h3>Diseño de Diapositivas</h3>
+          <p>Presentaciones modernas en PowerPoint o Google Slides, listas para impresionar.</p>
+        </div>
+        <div class="card">
+          <h3>Ensayos y Trabajos</h3>
+          <p>Contenido original, bien investigado y con formato académico.</p>
+        </div>
+        <div class="card">
+          <h3>Pósters Académicos</h3>
+          <p>Diseños visuales impactantes para exposiciones y ferias.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <h2>Portafolio</h2>
+      <div class="gallery">
+        <img src="https://www.slidesalad.com/wp-content/uploads/2019/05/Minimal-PowerPoint-Templates-Modern-PPT-Slides.jpg" alt="Diapositiva ejemplo" loading="lazy" />
+        <img src="https://designshack.net/wp-content/uploads/Slide-Pro.-Free-Modern-Presentation-Template.jpg" alt="Diapositiva ejemplo" loading="lazy" />
+        <img src="https://marketplace.canva.com/EAF7ViGH7yA/2/0/800w/canva-landscape-university-research-poster-in-beige-and-white-contemporary-editorial-style-iJIcXQfEius.jpg" alt="Póster académico" loading="lazy" />
+        <img src="https://img.freepik.com/free-psd/modern-business-presentation-template_1393-177.jpg" alt="Diapositiva ejemplo" loading="lazy" />
+      </div>
+    </section>
+
+    <section id="how">
+      <h2>¿Cómo funciona?</h2>
+      <ol class="steps">
+        <li>Contáctame por WhatsApp</li>
+        <li>Cuéntame qué necesitas</li>
+        <li>Te envío cotización y detalles</li>
+        <li>¡Recibe tu trabajo en menos de 1 hora!</li>
+      </ol>
+      <a href="https://wa.me/573044883335" class="cta-button">¡Empecemos ahora!</a>
+    </section>
+
+    <section id="reviews">
+      <h2>Reseñas de Clientes</h2>
+
+      <div class="review-form">
+        <h3>Deja tu reseña ⭐</h3>
+        <input type="text" id="review-name" placeholder="Tu nombre" required />
+        <textarea id="review-message" placeholder="Tu experiencia..." required></textarea>
+        <div class="rating">
+          <span>Calificación:</span>
+          <span class="star" data-value="1">☆</span>
+          <span class="star" data-value="2">☆</span>
+          <span class="star" data-value="3">☆</span>
+          <span class="star" data-value="4">☆</span>
+          <span class="star" data-value="5">☆</span>
+        </div>
+        <button type="button" id="submit-review" class="cta-button">Enviar reseña</button>
+      </div>
+
+      <div id="reviews-list"></div>
+    </section>
+
+    <section id="contact">
+      <h2>¿Listo para empezar?</h2>
+      <p class="contact-number">WhatsApp: <strong>+57 304 488 3335</strong></p>
+      <a href="https://wa.me/573044883335" class="cta-button">Chatear ahora</a>
+    </section>
+  </main>
+
+  <a href="https://wa.me/573044883335" class="whatsapp-float" aria-label="Escríbeme por WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+  </a>
+
+  <footer>
+    <p>&copy; 2025 Alejo Express — Tus ideas, en otro nivel.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
