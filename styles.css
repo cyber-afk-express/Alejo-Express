@@ -1,7 +1,7 @@
 :root {
   --bg: #fafafa;
   --text: #222;
-  --accent: #25d366; /* WhatsApp green */
+  --accent: #2563eb; /* 🔵 AZUL en lugar de verde de WhatsApp */
   --card-bg: #fff;
   --border: #eee;
   --shadow: rgba(0, 0, 0, 0.08);
@@ -23,7 +23,7 @@ body {
   position: relative;
 }
 
-/* 🔸 FONDO DE LUJO (único cambio) */
+/* 🔸 FONDO DE LUJO (sin cambios) */
 body::before {
   content: "";
   position: fixed;
@@ -35,7 +35,7 @@ body::before {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  opacity: 0.10; /* 10% visible → 90% transparente */
+  opacity: 0.10;
   z-index: -2;
 }
 
@@ -67,7 +67,7 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--accent);
+  color: var(--accent); /* 🔵 Ahora es azul al pasar el mouse */
 }
 
 main {
@@ -91,7 +91,7 @@ h2 {
 
 /* Hero */
 .hero {
-  background: linear-gradient(135deg, #f9f9ff 0%, #f0fff4 100%);
+  background: linear-gradient(135deg, #f9f9ff 0%, #f0f7ff 100%); /* 🔵 Fondo suave con toque azul */
   padding: 6rem 1.5rem;
   text-align: center;
   border-radius: 0 0 24px 24px;
@@ -104,7 +104,7 @@ h2 {
   font-size: 2.8rem;
   margin-bottom: 1rem;
   font-weight: 800;
-  background: linear-gradient(90deg, #222, #555);
+  background: linear-gradient(90deg, #222, #3b82f6); /* 🔵 Degradado azul en el título */
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -123,7 +123,7 @@ h2 {
 }
 
 .delivery {
-  color: #28a745;
+  color: #1d4ed8; /* 🔵 Azul oscuro en lugar de verde */
   font-weight: 600;
   margin-bottom: 1.5rem;
 }
@@ -132,7 +132,7 @@ h2 {
 .cta-button,
 .btn {
   display: inline-block;
-  background-color: var(--accent);
+  background-color: var(--accent); /* 🔵 Azul */
   color: white;
   padding: 0.9rem 2rem;
   border-radius: 50px;
@@ -140,13 +140,13 @@ h2 {
   font-weight: 600;
   font-size: 1.05rem;
   transition: all 0.25s ease;
-  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3); /* 🔵 Sombra coordinada con azul */
 }
 
 .cta-button:hover,
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4); /* 🔵 Sombra más intensa */
 }
 
 /* Services */
@@ -212,7 +212,7 @@ h2 {
   content: counter(step);
   position: absolute;
   left: -2rem;
-  background: var(--accent);
+  background: var(--accent); /* 🔵 Círculos numerados en azul */
   color: white;
   width: 28px;
   height: 28px;
@@ -231,14 +231,14 @@ h2 {
   margin-bottom: 1.5rem;
 }
 
-/* WhatsApp Float */
+/* WhatsApp Float → ahora es "Botón de contacto en azul" */
 .whatsapp-float {
   position: fixed;
   width: 60px;
   height: 60px;
   bottom: 30px;
   right: 30px;
-  background-color: var(--accent);
+  background-color: var(--accent); /* 🔵 Azul */
   color: #fff;
   border-radius: 50px;
   text-align: center;
@@ -251,7 +251,7 @@ h2 {
 
 .whatsapp-float img {
   width: 70%;
-  filter: invert(1);
+  filter: invert(1); /* Blanco sobre azul */
 }
 
 /* Footer */
