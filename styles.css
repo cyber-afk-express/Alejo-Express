@@ -249,10 +249,6 @@ h2 {
   justify-content: center;
 }
 
-.whatsapp-float img {
-  filter: invert(1); /* ❌ ELIMÍNALA */
-}
-
 /* Footer */
 footer {
   text-align: center;
@@ -276,4 +272,5 @@ footer {
     font-size: 1rem;
   }
 }
+
 
