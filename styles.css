@@ -250,8 +250,7 @@ h2 {
 }
 
 .whatsapp-float img {
-  width: 70%;
-  filter: invert(1); /* Blanco sobre azul */
+  filter: invert(1); /* ❌ ELIMÍNALA */
 }
 
 /* Footer */
@@ -277,3 +276,4 @@ footer {
     font-size: 1rem;
   }
 }
+
