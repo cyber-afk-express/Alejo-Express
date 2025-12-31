@@ -1,7 +1,7 @@
 :root {
   --bg: #fafafa;
   --text: #222;
-  --accent: #2563eb; /* 🔵 AZUL en lugar de verde de WhatsApp */
+  --accent: #2563eb; /* Azul principal */
   --card-bg: #fff;
   --border: #eee;
   --shadow: rgba(0, 0, 0, 0.08);
@@ -19,11 +19,10 @@ body {
   color: var(--text);
   line-height: 1.6;
   scroll-behavior: smooth;
-  /* Fondo de lujo académico en toda la página */
   position: relative;
 }
 
-/* 🔸 FONDO DE LUJO (sin cambios) */
+/* Fondo sutil de libros (opcional) */
 body::before {
   content: "";
   position: fixed;
@@ -39,7 +38,6 @@ body::before {
   z-index: -2;
 }
 
-/* El resto es exactamente tu diseño original */
 header {
   position: fixed;
   top: 0;
@@ -67,7 +65,7 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--accent); /* 🔵 Ahora es azul al pasar el mouse */
+  color: var(--accent);
 }
 
 main {
@@ -91,7 +89,7 @@ h2 {
 
 /* Hero */
 .hero {
-  background: linear-gradient(135deg, #f9f9ff 0%, #f0f7ff 100%); /* 🔵 Fondo suave con toque azul */
+  background: linear-gradient(135deg, #f9f9ff 0%, #f0f7ff 100%);
   padding: 6rem 1.5rem;
   text-align: center;
   border-radius: 0 0 24px 24px;
@@ -104,7 +102,7 @@ h2 {
   font-size: 2.8rem;
   margin-bottom: 1rem;
   font-weight: 800;
-  background: linear-gradient(90deg, #222, #3b82f6); /* 🔵 Degradado azul en el título */
+  background: linear-gradient(90deg, #222, #3b82f6);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -123,16 +121,16 @@ h2 {
 }
 
 .delivery {
-  color: #1d4ed8; /* 🔵 Azul oscuro en lugar de verde */
+  color: #1d4ed8;
   font-weight: 600;
   margin-bottom: 1.5rem;
 }
 
-/* CTA Button */
+/* Botones CTA */
 .cta-button,
 .btn {
   display: inline-block;
-  background-color: var(--accent); /* 🔵 Azul */
+  background-color: var(--accent);
   color: white;
   padding: 0.9rem 2rem;
   border-radius: 50px;
@@ -140,13 +138,22 @@ h2 {
   font-weight: 600;
   font-size: 1.05rem;
   transition: all 0.25s ease;
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3); /* 🔵 Sombra coordinada con azul */
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
 }
 
 .cta-button:hover,
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4); /* 🔵 Sombra más intensa */
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
+}
+
+/* 🔹 CENTRAR BOTONES EN SECCIONES ESPECÍFICAS */
+#how .cta-button,
+#contact .cta-button {
+  display: block;
+  margin: 1.5rem auto 0;
+  width: fit-content;
+  text-align: center;
 }
 
 /* Services */
@@ -212,7 +219,7 @@ h2 {
   content: counter(step);
   position: absolute;
   left: -2rem;
-  background: var(--accent); /* 🔵 Círculos numerados en azul */
+  background: var(--accent);
   color: white;
   width: 28px;
   height: 28px;
@@ -229,24 +236,6 @@ h2 {
   text-align: center;
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
-}
-
-/* WhatsApp Float → ahora es "Botón de contacto en azul" */
-.whatsapp-float {
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 30px;
-  right: 30px;
-  background-color: var(--accent); /* 🔵 Azul */
-  color: #fff;
-  border-radius: 50px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 /* Footer */
@@ -272,5 +261,3 @@ footer {
     font-size: 1rem;
   }
 }
-
-
