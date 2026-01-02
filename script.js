@@ -1,4 +1,4 @@
-// Scroll suave (ya existente)
+// Scroll suave
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
@@ -8,75 +8,31 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Popup Año Nuevo (aparece siempre al cargar)
-window.addEventListener('load', showNewYearPopup);
+// Countdown hasta Día de Reyes (6 enero 2026 00:00:00)
+const reyesDate = new Date('2026-01-06T00:00:00').getTime();
 
-function showNewYearPopup() {
-  const popup = document.getElementById('newYearPopup');
-  popup.style.display = 'flex';
+function updateCountdown() {
+  const now = new Date().getTime();
+  const distance = reyesDate - now;
 
-  createFallingConfetti();
-  createSideConfetti();
-
-  // Cerrar con botón o clic afuera
-  document.querySelector('.close-popup').onclick = closeNewYearPopup;
-  popup.onclick = function(e) {
-    if (e.target === popup) closeNewYearPopup();
-  };
-}
-
-function closeNewYearPopup() {
-  const popup = document.getElementById('newYearPopup');
-  popup.style.animation = 'fadeOut 0.6s ease-out';
-  setTimeout(() => {
-    popup.style.display = 'none';
-    popup.style.animation = '';
-    document.querySelectorAll('.confetti, .side-confetti').forEach(el => el.remove());
-  }, 600);
-}
-
-function createFallingConfetti() {
-  const colors = ['#ff6b6b', '#feca57', '#48dbfb', '#a78bfa', '#ff9ff3', '#54a0ff'];
-  for (let i = 0; i < 80; i++) {
-    const confetti = document.createElement('div');
-    confetti.className = 'confetti';
-    confetti.style.left = Math.random() * 100 + 'vw';
-    confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-    confetti.style.animationDuration = (Math.random() * 3 + 3) + 's';
-    confetti.style.animationDelay = Math.random() * 2 + 's';
-    document.body.appendChild(confetti);
-    setTimeout(() => confetti.remove(), 8000);
-  }
-}
-
-function createSideConfetti() {
-  const colors = ['#ff6b6b', '#feca57', '#48dbfb', '#a78bfa', '#ff9ff3'];
-  const popupContent = document.querySelector('.popup-content');
-
-  // Lado izquierdo
-  for (let i = 0; i < 30; i++) {
-    const c = document.createElement('div');
-    c.className = 'side-confetti';
-    c.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-    c.style.left = '8%';
-    c.style.top = Math.random() * 80 + 10 + '%';
-    c.style.setProperty('--dx', (Math.random() * 250 + 150) + 'px');
-    c.style.setProperty('--dy', (Math.random() * 200 - 100) + 'px');
-    c.style.animationDelay = Math.random() * 0.8 + 's';
-    popupContent.appendChild(c);
+  if (distance < 0) {
+    document.getElementById('countdown').innerHTML = '<p style="font-size:1.5rem; color:#dc2626;">¡Feliz Día de Reyes! 👑🎉</p>';
+    return;
   }
 
-  // Lado derecho
-  for (let i = 0; i < 30; i++) {
-    const c = document.createElement('div');
-    c.className = 'side-confetti';
-    c.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-    c.style.right = '8%';
-    c.style.left = 'auto';
-    c.style.top = Math.random() * 80 + 10 + '%';
-    c.style.setProperty('--dx', -(Math.random() * 250 + 150) + 'px');
-    c.style.setProperty('--dy', (Math.random() * 200 - 100) + 'px');
-    c.style.animationDelay = Math.random() * 0.8 + 0.5 + 's';
-    popupContent.appendChild(c);
-  }
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById('days').textContent = days.toString().padStart(2, '0');
+  document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+  document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+  document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
 }
+
+// Actualiza cada segundo
+setInterval(updateCountdown, 1000);
+
+// Primera ejecución inmediata
+updateCountdown();
