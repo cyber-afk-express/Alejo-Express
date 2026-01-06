@@ -6,11 +6,13 @@
   --border: #eee;
   --shadow: rgba(0, 0, 0, 0.08);
 }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: "Inter", sans-serif;
   background-color: var(--bg);
@@ -19,6 +21,7 @@ body {
   scroll-behavior: smooth;
   position: relative;
 }
+
 /* Fondo sutil de libros */
 body::before {
   content: "";
@@ -34,6 +37,7 @@ body::before {
   opacity: 0.10;
   z-index: -2;
 }
+
 header {
   position: fixed;
   top: 0;
@@ -44,12 +48,14 @@ header {
   padding: 1rem 2rem;
   border-bottom: 1px solid var(--border);
 }
+
 nav {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 1.5rem;
 }
+
 nav a {
   text-decoration: none;
   color: var(--text);
@@ -57,18 +63,22 @@ nav a {
   font-size: 1rem;
   transition: color 0.2s;
 }
+
 nav a:hover {
   color: var(--accent);
 }
+
 main {
   margin-top: 80px;
   padding: 0 1.5rem;
 }
+
 section {
   padding: 4rem 0;
   max-width: 1200px;
   margin: 0 auto;
 }
+
 h2 {
   text-align: center;
   margin-bottom: 2.5rem;
@@ -76,6 +86,7 @@ h2 {
   font-size: 2rem;
   color: #111;
 }
+
 /* Hero */
 .hero {
   background: linear-gradient(135deg, #f9f9ff 0%, #f0f7ff 100%);
@@ -86,6 +97,7 @@ h2 {
   position: relative;
   z-index: 1;
 }
+
 .hero h1 {
   font-size: 2.8rem;
   margin-bottom: 1rem;
@@ -95,21 +107,25 @@ h2 {
   background-clip: text;
   color: transparent;
 }
+
 .subtitle {
   font-size: 1.3rem;
   color: #555;
   margin-bottom: 1.2rem;
 }
+
 .price {
   font-size: 1.2rem;
   margin: 0.8rem 0;
   font-weight: 600;
 }
+
 .delivery {
   color: #1d4ed8;
   font-weight: 600;
   margin-bottom: 1.5rem;
 }
+
 /* Botones CTA */
 .cta-button,
 .btn {
@@ -124,11 +140,13 @@ h2 {
   transition: all 0.25s ease;
   box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
 }
+
 .cta-button:hover,
 .btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
 }
+
 /* Centrar botones */
 #how .cta-button,
 #contact .cta-button {
@@ -137,12 +155,14 @@ h2 {
   width: fit-content;
   text-align: center;
 }
+
 /* Services */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
 }
+
 .card {
   background: var(--card-bg);
   padding: 2rem;
@@ -151,19 +171,23 @@ h2 {
   text-align: center;
   transition: transform 0.3s;
 }
+
 .card:hover {
   transform: translateY(-5px);
 }
+
 .card h3 {
   margin-bottom: 1rem;
   color: #111;
 }
+
 /* Portfolio */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.2rem;
 }
+
 .gallery img {
   width: 100%;
   height: auto;
@@ -171,9 +195,11 @@ h2 {
   box-shadow: 0 4px 12px var(--shadow);
   transition: opacity 0.3s;
 }
+
 .gallery img:hover {
   opacity: 0.9;
 }
+
 /* Steps */
 .steps {
   max-width: 600px;
@@ -182,10 +208,12 @@ h2 {
   font-size: 1.2rem;
   counter-reset: step;
 }
+
 .steps li {
   margin-bottom: 1.2rem;
   position: relative;
 }
+
 .steps li::before {
   counter-increment: step;
   content: counter(step);
@@ -202,12 +230,14 @@ h2 {
   font-weight: bold;
   font-size: 0.85rem;
 }
+
 /* Contact */
 .contact-number {
   text-align: center;
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
 }
+
 /* Footer */
 footer {
   text-align: center;
@@ -215,6 +245,7 @@ footer {
   color: #777;
   font-size: 0.95rem;
 }
+
 /* Responsive */
 @media (max-width: 600px) {
   .hero h1 {
@@ -231,70 +262,73 @@ footer {
   }
 }
 
-/* ==================== COUNTDOWN DÍA DE REYES ==================== */
-.countdown-container {
+/* ==================== BANNER DE DESCUENTO 10% ==================== */
+.discount-banner {
   margin-top: 3rem;
-  padding: 2rem;
-  background: rgba(255, 255, 255, 0.6);
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  padding: 2.5rem 2rem;
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  border: 3px solid #f59e0b;
+  text-align: center;
 }
-.countdown-container h3 {
-  font-size: 1.6rem;
-  margin-bottom: 0.8rem;
-  color: #1e40af;
-}
-.countdown-container p {
-  font-size: 1.1rem;
-  color: #374151;
+
+.discount-banner h3 {
+  font-size: 1.8rem;
+  color: #92400e;
   margin-bottom: 1rem;
 }
-.countdown {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  margin: 1.5rem 0;
+
+.discount-text {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #dc2626;
+  margin: 1rem 0;
 }
-.time-block {
-  background: var(--accent);
-  color: white;
-  padding: 1rem 1.2rem;
-  border-radius: 16px;
-  min-width: 100px;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+
+.original-price {
+  font-size: 1.3rem;
+  color: #78716c;
+  margin: 0.5rem 0;
 }
-.time-block span {
-  display: block;
+
+.original-price s {
+  color: #a8a29e;
+}
+
+.discounted-price {
   font-size: 2.2rem;
   font-weight: 800;
+  color: #166534;
+  margin: 1rem 0;
 }
-.time-block:nth-child(1) span { color: #fef3c7; }
-.time-block:nth-child(2) span { color: #dbeafe; }
-.time-block:nth-child(3) span { color: #fde68a; }
-.time-block:nth-child(4) span { color: #bfdbfe; }
-.countdown-note {
-  font-size: 1rem;
-  color: #1e40af;
-  font-weight: 600;
-  margin-top: 1rem;
+
+.discount-note {
+  font-size: 1.1rem;
+  color: #78716c;
+  margin: 1.5rem 0 2rem;
+  font-weight: 500;
+}
+
+.discount-tag {
+  background: #dc2626;
+  color: white;
+  font-size: 0.9rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  font-weight: bold;
+  margin-left: 0.8rem;
 }
 
 @media (max-width: 600px) {
-  .countdown {
-    gap: 1rem;
+  .discount-banner {
+    padding: 2rem 1.5rem;
   }
-  .time-block {
-    min-width: 80px;
-    padding: 0.8rem;
+  .discount-text {
+    font-size: 1.7rem;
   }
-  .time-block span {
-    font-size: 1.8rem;
-  }
-  .countdown-container h3 {
-    font-size: 1.4rem;
+  .discounted-price {
+    font-size: 1.9rem;
   }
 }
 
@@ -306,4 +340,3 @@ footer {
   margin-left: auto;
   margin-right: auto;
 }
-
